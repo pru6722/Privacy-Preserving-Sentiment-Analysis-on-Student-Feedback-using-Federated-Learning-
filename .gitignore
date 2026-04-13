@@ -1,0 +1,16 @@
+# Ignore datasets
+data/
+*.csv
+*.zip
+
+# Ignore models
+*.pt
+*.bin
+*.safetensors
+
+# Ignore outputs
+outputs/
+
+# Python
+__pycache__/
+*.pyc

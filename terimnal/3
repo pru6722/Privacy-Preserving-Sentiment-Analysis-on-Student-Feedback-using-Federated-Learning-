@@ -1,0 +1,21 @@
+
+--- Round 1 ---
+Client 1 trained
+Client 2 trained
+Client 3 trained
+
+--- Round 2 ---
+Client 1 trained
+Client 2 trained
+Client 3 trained
+
+--- Round 3 ---
+Client 1 trained
+Client 2 trained
+Client 3 trained
+
+Federated Training Complete ✅
+
+Final Federated Model Results:
+Accuracy: 0.9433
+F1 Score: 0.9158

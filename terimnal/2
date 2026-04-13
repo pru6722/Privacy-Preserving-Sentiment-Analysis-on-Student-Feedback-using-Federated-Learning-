@@ -1,0 +1,9 @@
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/opacus/privacy_engine.py:96: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/Users/prudhvisailingineni/Documents/6th Sem/ADS/Project/privacy_sentimental_Analysis/src/train_dp_model.py:79: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+Epoch 1, Loss: 102.6828
+Epoch 2, Loss: 41.6759
+Epoch 3, Loss: 30.7034
+
+Privacy Budget (ε): 0.94

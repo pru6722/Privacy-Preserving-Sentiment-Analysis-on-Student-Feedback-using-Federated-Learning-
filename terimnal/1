@@ -1,0 +1,82 @@
+Using Apple MPS GPU 🚀
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+        - Avoid using `tokenizers` before the fork if possible
+        - Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Loading weights: 100%|████████████████████████████████| 100/100 [00:00<00:00, 11102.21it/s]
+DistilBertForSequenceClassification LOAD REPORT from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_transform.weight  | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+pre_classifier.bias     | MISSING    | 
+classifier.bias         | MISSING    | 
+classifier.weight       | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED:   can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:      those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  0%|                                                             | 0/4000 [00:00<?, ?it/s]/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/torch/utils/data/dataloader.py:684: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+{'loss': '0.3628', 'grad_norm': '0.4245', 'learning_rate': '1.951e-05', 'epoch': '0.05'}   
+{'loss': '0.2146', 'grad_norm': '6.457', 'learning_rate': '1.901e-05', 'epoch': '0.1'}     
+{'loss': '0.1892', 'grad_norm': '1.315', 'learning_rate': '1.851e-05', 'epoch': '0.15'}    
+{'loss': '0.2019', 'grad_norm': '0.1179', 'learning_rate': '1.801e-05', 'epoch': '0.2'}    
+{'loss': '0.1803', 'grad_norm': '1.523', 'learning_rate': '1.75e-05', 'epoch': '0.25'}     
+Writing model shards: 100%|██████████████████████████████████| 1/1 [00:00<00:00,  2.87it/s]
+{'loss': '0.209', 'grad_norm': '0.34', 'learning_rate': '1.701e-05', 'epoch': '0.3'}       
+{'loss': '0.2699', 'grad_norm': '0.1234', 'learning_rate': '1.651e-05', 'epoch': '0.35'}   
+{'loss': '0.191', 'grad_norm': '5.949', 'learning_rate': '1.601e-05', 'epoch': '0.4'}      
+{'loss': '0.2205', 'grad_norm': '12.82', 'learning_rate': '1.551e-05', 'epoch': '0.45'}    
+{'loss': '0.177', 'grad_norm': '4.155', 'learning_rate': '1.501e-05', 'epoch': '0.5'}      
+Writing model shards: 100%|██████████████████████████████████| 1/1 [00:00<00:00,  3.10it/s]
+{'loss': '0.1656', 'grad_norm': '0.08986', 'learning_rate': '1.451e-05', 'epoch': '0.55'}  
+{'loss': '0.205', 'grad_norm': '4.158', 'learning_rate': '1.401e-05', 'epoch': '0.6'}      
+{'loss': '0.1366', 'grad_norm': '0.1052', 'learning_rate': '1.351e-05', 'epoch': '0.65'}   
+{'loss': '0.1668', 'grad_norm': '0.189', 'learning_rate': '1.301e-05', 'epoch': '0.7'}     
+{'loss': '0.1903', 'grad_norm': '10.44', 'learning_rate': '1.25e-05', 'epoch': '0.75'}     
+Writing model shards: 100%|██████████████████████████████████| 1/1 [00:00<00:00,  3.16it/s]
+{'loss': '0.2032', 'grad_norm': '5.333', 'learning_rate': '1.2e-05', 'epoch': '0.8'}       
+{'loss': '0.1547', 'grad_norm': '0.04929', 'learning_rate': '1.151e-05', 'epoch': '0.85'}  
+{'loss': '0.1837', 'grad_norm': '0.1033', 'learning_rate': '1.101e-05', 'epoch': '0.9'}    
+{'loss': '0.1874', 'grad_norm': '4.238', 'learning_rate': '1.051e-05', 'epoch': '0.95'}    
+{'loss': '0.1875', 'grad_norm': '0.0461', 'learning_rate': '1e-05', 'epoch': '1'}          
+Writing model shards: 100%|██████████████████████████████████| 1/1 [00:00<00:00,  3.12it/s]
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/torch/utils/data/dataloader.py:684: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+{'loss': '0.1812', 'grad_norm': '6.262', 'learning_rate': '9.505e-06', 'epoch': '1.05'}    
+{'loss': '0.1232', 'grad_norm': '0.7799', 'learning_rate': '9.005e-06', 'epoch': '1.1'}    
+{'loss': '0.1295', 'grad_norm': '0.02521', 'learning_rate': '8.505e-06', 'epoch': '1.15'}  
+{'loss': '0.1086', 'grad_norm': '17.07', 'learning_rate': '8.005e-06', 'epoch': '1.2'}     
+{'loss': '0.1305', 'grad_norm': '0.3963', 'learning_rate': '7.505e-06', 'epoch': '1.25'}   
+Writing model shards: 100%|██████████████████████████████████| 1/1 [00:00<00:00,  2.95it/s]
+{'loss': '0.1179', 'grad_norm': '1.14', 'learning_rate': '7.005e-06', 'epoch': '1.3'}      
+{'loss': '0.1056', 'grad_norm': '0.07361', 'learning_rate': '6.505e-06', 'epoch': '1.35'}  
+{'loss': '0.1168', 'grad_norm': '0.02603', 'learning_rate': '6.005e-06', 'epoch': '1.4'}   
+{'loss': '0.08624', 'grad_norm': '0.01626', 'learning_rate': '5.505e-06', 'epoch': '1.45'} 
+{'loss': '0.128', 'grad_norm': '0.02069', 'learning_rate': '5.005e-06', 'epoch': '1.5'}    
+Writing model shards: 100%|██████████████████████████████████| 1/1 [00:00<00:00,  4.17it/s]
+{'loss': '0.145', 'grad_norm': '0.02655', 'learning_rate': '4.505e-06', 'epoch': '1.55'}   
+{'loss': '0.143', 'grad_norm': '0.02661', 'learning_rate': '4.005e-06', 'epoch': '1.6'}    
+{'loss': '0.1195', 'grad_norm': '0.11', 'learning_rate': '3.505e-06', 'epoch': '1.65'}     
+{'loss': '0.129', 'grad_norm': '15.35', 'learning_rate': '3.005e-06', 'epoch': '1.7'}      
+{'loss': '0.127', 'grad_norm': '5.666', 'learning_rate': '2.505e-06', 'epoch': '1.75'}     
+Writing model shards: 100%|██████████████████████████████████| 1/1 [00:00<00:00,  2.31it/s]
+{'loss': '0.1653', 'grad_norm': '0.04536', 'learning_rate': '2.005e-06', 'epoch': '1.8'}   
+{'loss': '0.1238', 'grad_norm': '8.158', 'learning_rate': '1.505e-06', 'epoch': '1.85'}    
+{'loss': '0.1282', 'grad_norm': '0.02717', 'learning_rate': '1.005e-06', 'epoch': '1.9'}   
+{'loss': '0.1016', 'grad_norm': '0.5236', 'learning_rate': '5.05e-07', 'epoch': '1.95'}    
+{'loss': '0.1773', 'grad_norm': '4.641', 'learning_rate': '5e-09', 'epoch': '2'}           
+Writing model shards: 100%|██████████████████████████████████| 1/1 [00:00<00:00,  3.65it/s]
+{'train_runtime': '1018', 'train_samples_per_second': '31.44', 'train_steps_per_second': '3.93', 'train_loss': '0.1646', 'epoch': '2'}
+100%|██████████████████████████████████████████████████| 4000/4000 [16:57<00:00,  3.93it/s]
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/torch/utils/data/dataloader.py:684: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+100%|████████████████████████████████████████████████████| 500/500 [00:32<00:00, 15.50it/s]
+
+Final Results: {'eval_loss': 0.1977541297674179, 'eval_accuracy': 0.952, 'eval_f1': 0.945137587626966, 'eval_runtime': 32.4731, 'eval_samples_per_second': 123.179, 'eval_steps_per_second': 15.397, 'epoch': 2.0}
